@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css"
@@ -16,7 +17,8 @@ const customIcons = new Icon ({
   iconSize: [40,40]
 })
 
-const Maps = () => {
+const Maps = async () => {
+    
   return (
     <MapContainer center={position} zoom={13} scrollWheelZoom={true} className=" h-96">
       <TileLayer
